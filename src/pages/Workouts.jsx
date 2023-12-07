@@ -10,9 +10,9 @@ const Workouts = () => {
         setAdd(!add);
     }
     return (
-        <div className='Workout-wrapper'>
-            <h2>Workouts</h2>
-            <button className="btn btn-neutral" onClick={handleClick}>Add Activity</button>
+        <div className='card container mx-auto mt-4 w-3/4 drop-shadow shadow-2xl bg-base-100'>
+            <h2 className='text-5xl font-bold py-4 uppercase'>Workouts</h2>
+            <button className="btn btn-ghost text-lg mx-auto" onClick={handleClick}>Create New Activity</button>
             {add && <AddActivity />}
             {allactivities.map((activity) => {
                     return (

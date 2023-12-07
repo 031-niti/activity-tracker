@@ -16,20 +16,26 @@ const AddActivity = () => {
             payload: {
                 name: data.name,
                 duration: data.duration,
-            },  
+            },
         })
     }
     return (
-        <div className='add'>
-            <div className="input-section">
-                <p>Activity name:</p>
-                <input type="text" name="name" placeholder='Activity name ...' onChange={(e)=>handleChange(e)} />
-            </div>
-            <div className="input-section">
-                <p>Activity duration:</p>
-                <input type="text" name="duration" placeholder='Activity duration ...' onChange={(e) => handleChange(e)} />
-            </div>
-            <button className="btn btn-neutral" onClick={addActivity}>Add Activity</button>
+        <div className='flex flex-col justify-center items-center '>
+            <label className="form-control w-full max-w-xs my-1">
+                <div className="label">
+                    <span className="label-text">Activity Name?</span>
+                </div>
+                <input type="text" name="name" placeholder="Enter Name..."
+                    className="input input-bordered w-full max-w-xs focus:bg-base-200 focus:outline-0"
+                    onChange={(e) => handleChange(e)} />
+                <div className="label">
+                    <span className="label-text">Activity Duration?</span>
+                </div>
+                <input type="text" name="duration" placeholder="Enter Duration..."
+                    className="input input-bordered w-full max-w-xs focus:bg-base-200 focus:outline-0"
+                    onChange={(e) => handleChange(e)} />
+            </label>
+            <button className="btn btn-success mt-3 w-32" onClick={addActivity}>Add Activity</button>
         </div>
     )
 }
